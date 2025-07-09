@@ -1,7 +1,7 @@
 # Google Tag Manager Power Reviews product object builder
 
-This GTM tag template populates the products object based on the GA4 items object.
-This is required as part of the Power Reviews Checkout Beacon functionality. This is one of two methods to send data to Power Reviews (alternative is API) and is the only way to populate the Conversion Analytics reports in the reporting suite.
+This GTM tag template populates the products array based on the GA4 items raay or a custom product array.
+This array is required as part of the Power Reviews Checkout Beacon functionality. This is one of two methods to send data to Power Reviews (alternative is API) and is the only way to populate the Conversion Analytics reports in the reporting suite.
 More details on the Checkout Beacon can be found [here](https://help.powerreviews.com/hc/en-us/articles/7533484327707-Adding-the-Checkout-Beacon).
 
 ## How it works
@@ -36,7 +36,15 @@ Don't forget to update the other variables in the custom HTML tag as well.
 }catch(e){window.console && window.console.log(e)}}());
 </script>
 ```
-### Variable Mapping
+## Variable Mapping
+
+We have two versions of variable mapping available:
+* GA4 Standard Item Configuration
+* Custom Item Configuration
+
+### GA4 Standard Item Configuration
+
+This is based on the standard GA4 items object and variable cannot be changed
 
 The variables are mapped:
 * page_id --> item_id
@@ -44,3 +52,7 @@ The variables are mapped:
 * quantity -->> quantity
 * unit_price -->> price
 * page_id_variant -->> item_variant
+
+### Custom Item Configuration
+
+This is a custom format. You can define the array which contains the product objects and define each of the product variables individually.
