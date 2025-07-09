@@ -103,6 +103,12 @@ ___TEMPLATE_PARAMETERS___
         "name": "quantity",
         "displayName": "Quantity variable to map",
         "simpleValueType": true
+      },
+      {
+        "type": "TEXT",
+        "name": "variant",
+        "displayName": "Product variant name",
+        "simpleValueType": true
       }
     ],
     "enablingConditions": [
@@ -132,7 +138,8 @@ if (configType === 'ga4Standard') {
 		page_id: i.item_id,
 		product: i.item_name,
 		unit_price: i.price,
-		quantity: i.quantity ? math.round(i.quantity) : i.quantity
+		quantity: i.quantity ? math.round(i.quantity) : i.quantity,
+        page_id_variant: i.item_variant
 	  };
 	  return itemObj;
 	};
@@ -153,6 +160,7 @@ if (configType === 'ga4Standard') {
   var br_item_name = data.item_name;
   var br_price = data.price;
   var br_quantity = data.quantity;
+  var br_variant = data.variant;
 
   function mapProductData(i) {
     var itemObj = {
@@ -160,7 +168,8 @@ if (configType === 'ga4Standard') {
       sku: i.data.sku,
       name: i.data.name ? i.data.name.split('!').join('') : i.data.name,
       price: i.data.price,
-      quantity: i.data.quantity ? math.round(i.data.quantity) : i.data.quantity
+      quantity: i.data.quantity ? math.round(i.data.quantity) : i.data.quantity,
+      page_id_variant: i.data.variant
     };
     log(itemObj);
     return itemObj;
