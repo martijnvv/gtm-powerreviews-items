@@ -7,6 +7,7 @@ More details on the Checkout Beacon can be found [here](https://help.powerreview
 ## How it works
 
 Include the following script in a Custom HTML tag. Replace the *{{powerreviews_items_array}}* part of the code with the GTM variable name created with this custom template.
+Don't forget to update the other variables in the custom HTML tag as well.
 
 ```javascript
 <script type="text/javascript" src="//static.powerreviews.com/t/v1/tracker.js">
