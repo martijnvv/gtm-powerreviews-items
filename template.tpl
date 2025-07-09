@@ -14,6 +14,7 @@ ___INFO___
   "version": 1,
   "securityGroups": [],
   "displayName": "Power Reviews Item Builder",
+  "categories": ["PERSONALIZATION", "MARKETING"],
   "description": "We populate the items in the order in the format for Power Reviews",
   "containerContexts": [
     "WEB"
