@@ -44,7 +44,8 @@ const mapProductData = i => {
     page_id: i.item_id,
     product: i.item_name,
     unit_price: i.price,
-    quantity: i.quantity ? math.round(i.quantity) : i.quantity
+    quantity: i.quantity ? math.round(i.quantity) : i.quantity,
+    page_id_variant: i.item_variant
   };
   return itemObj;
 };
