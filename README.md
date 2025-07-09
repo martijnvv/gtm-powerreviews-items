@@ -36,3 +36,11 @@ Don't forget to update the other variables in the custom HTML tag as well.
 }catch(e){window.console && window.console.log(e)}}());
 </script>
 ```
+### Variable Mapping
+
+The variables are mapped:
+* page_id --> item_id
+* product_name -->> item_name
+* quantity -->> quantity
+* unit_price -->> price
+* page_id_variant -->> item_variant
