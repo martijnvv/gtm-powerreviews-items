@@ -1,0 +1,5 @@
+homepage: "https://martijnvanvreeden.nl"
+documentation: "https://github.com/martijnvv/gtm-powerreviews-items"
+versions:
+  - sha: acc2099e0dcc73791bb82732c161859d24f65348
+    changeNotes: Initial release, with updated homepage
