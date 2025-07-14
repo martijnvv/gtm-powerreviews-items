@@ -149,7 +149,7 @@ if (configType === 'ga4Standard') {
 	  if (getType(eec.items) === 'array') {
 		return eec.items.map(i => {
 		  const product = mapProductData(i);
-          log(product);
+          //log(product);
 		  return product;
 		});
 	}
@@ -172,12 +172,12 @@ if (configType === 'ga4Standard') {
       quantity: i.data.quantity ? math.round(i.data.quantity) : i.data.quantity,
       page_id_variant: i.data.variant
     };
-    log(itemObj);
+    //log(itemObj);
     return itemObj;
   }
 
   var eec = copyFromDataLayer(data.arrayName, 1) || {};
-  log(eec);
+  //log(eec);
   if (getType(eec.items) === 'array') {
     var outputCustom = [];
     for (var k = 0; k < eec.length; k++) {
